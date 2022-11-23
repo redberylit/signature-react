@@ -21,6 +21,7 @@ import Contact from "./views/Contact"
 
 import AssignUsers from './components/AssignUsers';
 import prepareDocument from './components/PrepareDocument/PrepareDocument'
+import Review from "./views/Review";
 
 
 export default [
@@ -111,5 +112,11 @@ export default [
     exact: true,
     layout: LoginLayout,
     component:Login
+  },
+  {
+    path: "/review",
+    exact: true,
+    layout: LoginLayout,
+    component:Review
   }
 ];

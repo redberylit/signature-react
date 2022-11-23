@@ -19,7 +19,7 @@ export default function() {
     {
       title: "Review Document",
       htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/components-overview",
+      to: "/review",
      }
     // {
     //   title: "Tables",
