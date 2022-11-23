@@ -9,12 +9,12 @@ export default function() {
     {
       title: "Assign",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
-      to: "/blog-posts",
+      to: "/assign",
     },
     {
       title: "Add New Document",
       htmlBefore: '<i class="material-icons">note_add</i>',
-      to: "/add-new-post",
+      to: "/prepare-document",
     },
     {
       title: "Review Document",
