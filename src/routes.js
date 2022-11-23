@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 // Layout Types
-import { DefaultLayout,LoginLayout } from "./layouts";
+import { DefaultLayout,LoginLayout ,FrontLayout} from "./layouts";
 
 // Route Views
 import BlogOverview from "./views/BlogOverview";
@@ -15,6 +15,9 @@ import BlogPosts from "./views/BlogPosts";
 import Pdf from "./views/Pdf"
 import AddFile from "./views/AddFile"
 import Login from "./views/Login"
+import Home from "./views/Home"
+import About from "./views/About"
+import Contact from "./views/Contact"
 
 import AssignUsers from './components/AssignUsers';
 import prepareDocument from './components/PrepareDocument/PrepareDocument'
@@ -28,7 +31,7 @@ export default [
     component: Login
   },
   {
-    path: "/",
+    path: "/assign",
     exact: true,
    layout: DefaultLayout,
     component: AssignUsers
@@ -89,5 +92,24 @@ export default [
     path: "/blog-posts",
     layout: DefaultLayout,
     component: BlogPosts
+  },
+  {
+    path: "/",
+    exact: true,
+   layout: FrontLayout,
+    component: Home
+  },
+
+  {
+    path: "/about",
+    exact: true,
+    layout: FrontLayout,
+    component:About
+  },
+  {
+    path: "/login",
+    exact: true,
+    layout: LoginLayout,
+    component:Login
   }
 ];

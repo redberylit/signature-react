@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 // Layout Types
-import { DefaultLayout,LoginLayout } from "./layouts";
+import { DefaultLayout,LoginLayout ,FrontLayout} from "./layouts";
 
 // Route Views
 import BlogOverview from "./views/BlogOverview";
@@ -15,63 +15,31 @@ import BlogPosts from "./views/BlogPosts";
 import Pdf from "./views/Pdf"
 import AddFile from "./views/AddFile"
 import Login from "./views/Login"
+import Home from "./views/Home"
+import About from "./views/About"
+import Contact from "./views/Contact"
+
 
 
 export default [
   {
     path: "/",
     exact: true,
-   layout: LoginLayout,
-    component: Login
+   layout: FrontLayout,
+    component: Home
   },
 
   {
-    path: "/pdf",
+    path: "/about",
     exact: true,
-    layout: DefaultLayout,
-    component:Pdf
+    layout: FrontLayout,
+    component:About
   },
   {
-    path: "/add-pdf",
+    path: "/login",
     exact: true,
-    layout: DefaultLayout,
-    component:AddFile
-  },
-
-
-  {
-    path: "/blog-overview",
-    layout: DefaultLayout,
-    component: BlogOverview
-  },
-  {
-    path: "/user-profile-lite",
-    layout: DefaultLayout,
-    component: UserProfileLite
-  },
-  {
-    path: "/add-new-post",
-    layout: DefaultLayout,
-    component: AddNewPost
-  },
-  {
-    path: "/errors",
-    layout: DefaultLayout,
-    component: Errors
-  },
-  {
-    path: "/components-overview",
-    layout: DefaultLayout,
-    component: ComponentsOverview
-  },
-  {
-    path: "/tables",
-    layout: DefaultLayout,
-    component: Tables
-  },
-  {
-    path: "/blog-posts",
-    layout: DefaultLayout,
-    component: BlogPosts
+    layout: LoginLayout,
+    component:Login
   }
+
 ];
